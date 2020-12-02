@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.808.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlinerTestingProject", "onlinerTestingProject\onlinerTestingProject.csproj", "{1AB96185-D822-4ACA-9570-5BA6564D458C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1AB96185-D822-4ACA-9570-5BA6564D458C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1AB96185-D822-4ACA-9570-5BA6564D458C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1AB96185-D822-4ACA-9570-5BA6564D458C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1AB96185-D822-4ACA-9570-5BA6564D458C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {94192510-4C6A-45CD-8B8E-063D240A472E}
+	EndGlobalSection
+EndGlobal
