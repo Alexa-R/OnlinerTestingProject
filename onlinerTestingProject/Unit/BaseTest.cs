@@ -1,4 +1,3 @@
-using System.Configuration;
 using NUnit.Framework;
 namespace onlinerTestingProject.Unit
 {
@@ -12,9 +11,7 @@ namespace onlinerTestingProject.Unit
             public void SetUpTest()
             {
                 WebDriverFactory.InitBrowser("Chrome");
-                string url = ConfigurationManager.AppSettings["message"];
-                WebDriverFactory.GoToUrl(url);
-                //WebDriverFactory.GoToUrl("https://www.onliner.by/");
+                WebDriverFactory.GoToUrl("https://www.onliner.by/");
                 WebDriverFactory.Driver.Manage().Window.Maximize();
             }
 
