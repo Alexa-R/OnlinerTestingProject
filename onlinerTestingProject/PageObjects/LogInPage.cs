@@ -6,11 +6,11 @@ namespace onlinerTestingProject.PageObjects
 {
     public class LogInPage
     {
-        private By MailField => By.XPath("(//*[@class='auth-form__field']//input)[1]");
+        private By MailField = By.XPath("(//*[@class='auth-form__field']//input)[1]");
 
-        private By PasswordField => By.XPath("//*[@type = 'password']");
+        private By PasswordField = By.XPath("//*[@type = 'password']");
 
-        private By LogInButton => By.XPath("//button[contains(@class,'button')]");
+        private By LogInButton = By.XPath("//button[contains(@class,'button')]");
 
 
 
