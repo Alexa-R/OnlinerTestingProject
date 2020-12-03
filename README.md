@@ -18,4 +18,4 @@
 ##
 ## Скриншоты успешного выполнения:
 
-![ ](/StoreApp/images/screen1.png)
+![ ](/onlinerTestingProject/images/screen1.png)
