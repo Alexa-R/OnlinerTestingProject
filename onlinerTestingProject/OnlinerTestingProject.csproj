@@ -20,5 +20,6 @@
     <Folder Include="TestCases\" />
     <Folder Include="WrapperFactory\" />
     <Folder Include="Unit\" />
+    <Folder Include="images\" />
   </ItemGroup>
 </Project>
