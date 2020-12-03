@@ -10,8 +10,8 @@ namespace onlinerTestingProject.TestCases
         public void LogInAsUserTest()
         {
             Page.HomePage.ClickSignInButton();
-            Page.LogInPage.EnterMail();
-            Page.LogInPage.EnterPassword();
+            Page.LogInPage.EnterMail("novaj49910@58as.com");
+            Page.LogInPage.EnterPassword("qwerty1234");
             Page.LogInPage.ClickLogInButton();
 
             Assert.IsTrue(Page.HomePage.IsProfileLinkDisplayed());
