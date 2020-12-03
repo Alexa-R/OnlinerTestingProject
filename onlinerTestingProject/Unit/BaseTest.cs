@@ -1,8 +1,10 @@
 using NUnit.Framework;
+using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
 using System;
 using System.Configuration;
 
-namespace OnlinerTestingProject
+namespace onlinerTestingProject.Unit
 {
     public class Tests
     {
@@ -14,9 +16,8 @@ namespace OnlinerTestingProject
             public void SetUpTest()
             {
                 WebDriverFactory.InitBrowser("Chrome");
-                WebDriverFactory.GoToUrl(ConfigurationManager.AppSettings["URL"]);
+                WebDriverFactory.GoToUrl("https://www.onliner.by/");
                 WebDriverFactory.Driver.Manage().Window.Maximize();
-                //WebDriverFactory.Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
             }
 
             [TearDown]

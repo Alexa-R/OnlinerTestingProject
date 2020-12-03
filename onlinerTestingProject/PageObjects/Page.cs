@@ -2,23 +2,26 @@
 using OpenQA.Selenium.Support.PageObjects;
 using SeleniumExtras.PageObjects;
 
-namespace OnlinerTestingProject.PageObjects
+namespace onlinerTestingProject.PageObjects
 {
-    public class PageInit
+    public class Page
     {
         private static T GetPage<T>() where T : new()
         {
             var page = new T();
-            PageFactory.InitElements(WebDriverFactory.Driver, page);
-
             return page;
         }
-
 
         public static HomePage HomePage => GetPage<HomePage>();
 
         public static LogInPage LogInPage => GetPage<LogInPage>();
 
+        public static SearchResultPage SearchResultPage => GetPage<SearchResultPage>();
 
+        public static ProductPage ProductPage => GetPage<ProductPage>();
+
+        public static CartPage CartPage => GetPage<CartPage>();
+
+        public static NewsPage NewsPage => GetPage<NewsPage>();
     }
 }

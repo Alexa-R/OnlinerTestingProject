@@ -1,24 +1,20 @@
-﻿using System;
-using NUnit.Framework;
-using OnlinerTestingProject.PageObjects;
-using static OnlinerTestingProject.Tests;
+﻿using NUnit.Framework;
+using onlinerTestingProject.PageObjects;
+using static onlinerTestingProject.Unit.Tests;
 
-namespace OnlinerTestingProject.TestCases
+namespace onlinerTestingProject.TestCases
 {
     public class LogInAsUser : BaseTest
     {
         [Test]
         public void LogInAsUserTest()
         {
+            Page.HomePage.ClickSignInButton();
+            Page.LogInPage.EnterMail();
+            Page.LogInPage.EnterPassword();
+            Page.LogInPage.ClickLogInButton();
 
-
-
-            //SetUpTest();
-            //PageInit.HomePage.ClickSignInButton();
-            //PageInit.LogInPage.EnterMail();
-            //PageInit.LogInPage.EnterPassword();
-            //PageInit.LogInPage.ClickLogInButton();
-            //TearDownTest();
+            Assert.IsTrue(Page.HomePage.IsProfileLinkDisplayed());
         }
     }
 }

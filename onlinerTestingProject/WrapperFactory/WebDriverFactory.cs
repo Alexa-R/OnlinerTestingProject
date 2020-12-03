@@ -5,7 +5,7 @@ using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.IE;
 
-namespace OnlinerTestingProject
+namespace onlinerTestingProject
 {
     public class WebDriverFactory
     {
@@ -14,18 +14,8 @@ namespace OnlinerTestingProject
 
         public static IWebDriver Driver
         {
-            get
-            {
-                if (driver == null)
-                    throw new NullReferenceException("The WebDriver browser instance was not initialized." +
-                        " You should first call the method InitBrowser.");
-
-                return driver;
-            }
-            private set
-            {
-                driver = value;
-            }
+            get { return driver; }
+           private set { driver = value; }
         }
 
         public static void InitBrowser(string browserName)
@@ -33,37 +23,34 @@ namespace OnlinerTestingProject
             switch (browserName)
             {
                 case "Firefox":
-                    if (driver == null)
+                    if (Driver == null)
                     {
                         driver = new FirefoxDriver();
-                        Drivers.Add("Firefox", driver);
+                        Drivers.Add("Firefox", Driver);
                     }
-
                     break;
 
                 case "IE":
-                    if (driver == null)
+                    if (Driver == null)
                     {
                         driver = new InternetExplorerDriver();
-                        Drivers.Add("IE", driver);
+                        Drivers.Add("IE", Driver);
                     }
-
                     break;
 
                 case "Chrome":
-                    if (driver == null)
+                    if (Driver == null)
                     {
                         driver = new ChromeDriver();
-                        Drivers.Add("Chrome", driver);
+                        Drivers.Add("Chrome", Driver);
                     }
-
                     break;
             }
         }
 
         public static void GoToUrl(string url)
         {
-            Driver.Url = url;
+            driver.Url = url;
         }
 
         public static void CloseAllDrivers()

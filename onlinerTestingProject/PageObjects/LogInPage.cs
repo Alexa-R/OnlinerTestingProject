@@ -2,33 +2,31 @@
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.PageObjects;
 
-namespace OnlinerTestingProject.PageObjects
+namespace onlinerTestingProject.PageObjects
 {
     public class LogInPage
     {
-        [FindsBy(How = How.XPath, Using = "(//*[@class='auth-form__field']//input)[1]")]
-        private IWebElement MailField;
+        private By MailField => By.XPath("(//*[@class='auth-form__field']//input)[1]");
 
-        [FindsBy(How = How.XPath, Using = "//*[@type = 'password']")]
-        private IWebElement PasswordField;
+        private By PasswordField => By.XPath("//*[@type = 'password']");
 
-        [FindsBy(How = How.XPath, Using = "//button[contains(@class,'button')]")]
-        private IWebElement LogInButton;
+        private By LogInButton => By.XPath("//button[contains(@class,'button')]");
+
 
 
         public void EnterMail()
         {
-            MailField.SendKeys("novaj49910@58as.com");
+            WebDriverFactory.Driver.FindElement(MailField).SendKeys("novaj49910@58as.com");
         }
 
         public void EnterPassword()
         {
-            PasswordField.SendKeys("qwerty1234");
+            WebDriverFactory.Driver.FindElement(PasswordField).SendKeys("qwerty1234");
         }
 
         public void ClickLogInButton()
         {
-            LogInButton.Click();
+            WebDriverFactory.Driver.FindElement(LogInButton).Click();
         }
     }
 }

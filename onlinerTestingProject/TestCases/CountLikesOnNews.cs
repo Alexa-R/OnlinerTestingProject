@@ -1,25 +1,18 @@
-﻿using System;
-using NUnit.Framework;
-using OnlinerTestingProject.PageObjects;
-using OpenQA.Selenium;
-using OpenQA.Selenium.Firefox;
-using SeleniumExtras.PageObjects;
+﻿using NUnit.Framework;
+using onlinerTestingProject.PageObjects;
+using static onlinerTestingProject.Unit.Tests;
 
-namespace OnlinerTestingProject.TestCases
+namespace onlinerTestingProject.TestCases
 {
-    public class CountLikesOnNews
+    public class CheckLikesOnNews : BaseTest
     {
         [Test]
         public void Test()
         {
-            IWebDriver driver = new FirefoxDriver();
-            driver.Url = "https://www.onliner.by/";
-            
-            //var homePage = new HomePage();
-            PageInit.HomePage.ClickSignInButton();
-            //homePage.ClickSignInButton();
-            driver.Close();
+            Page.HomePage.ScrollToTech();
+            Page.HomePage.ClickLastNews();
 
+            Assert.True(int.Parse(Page.NewsPage.GetTextLikeCount()) >= 0);
         }
     }
 }
