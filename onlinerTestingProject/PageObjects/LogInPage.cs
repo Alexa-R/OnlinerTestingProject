@@ -14,14 +14,14 @@ namespace onlinerTestingProject.PageObjects
 
 
 
-        public void EnterMail()
+        public void EnterMail(string mail)
         {
-            WebDriverFactory.Driver.FindElement(MailField).SendKeys("novaj49910@58as.com");
+            WebDriverFactory.Driver.FindElement(MailField).SendKeys(mail);
         }
 
-        public void EnterPassword()
+        public void EnterPassword(string password)
         {
-            WebDriverFactory.Driver.FindElement(PasswordField).SendKeys("qwerty1234");
+            WebDriverFactory.Driver.FindElement(PasswordField).SendKeys(password);
         }
 
         public void ClickLogInButton()
