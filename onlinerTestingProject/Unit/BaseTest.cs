@@ -1,9 +1,5 @@
-using NUnit.Framework;
-using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
-using System;
 using System.Configuration;
-
+using NUnit.Framework;
 namespace onlinerTestingProject.Unit
 {
     public class Tests
@@ -16,7 +12,9 @@ namespace onlinerTestingProject.Unit
             public void SetUpTest()
             {
                 WebDriverFactory.InitBrowser("Chrome");
-                WebDriverFactory.GoToUrl("https://www.onliner.by/");
+                string url = ConfigurationManager.AppSettings["message"];
+                WebDriverFactory.GoToUrl(url);
+                //WebDriverFactory.GoToUrl("https://www.onliner.by/");
                 WebDriverFactory.Driver.Manage().Window.Maximize();
             }
 
