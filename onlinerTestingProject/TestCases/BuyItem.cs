@@ -9,7 +9,6 @@ namespace OnlinerTestingProject.TestCases
         public void Test()
         {
             Pages.HomePage.SearchItem("MacBook");
-            Pages.SearchResultPage.SwitchProductsFrame();
             Pages.SearchResultPage.ClickItem();
             Pages.ProductPage.ClickAddToCartButton();
             Pages.ProductPage.ClickAddToCartButton();
