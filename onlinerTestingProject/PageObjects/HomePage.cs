@@ -11,7 +11,7 @@ namespace OnlinerTestingProject.PageObjects
 
         private By ProfileLink = By.XPath("//a[contains(@class, 'profile__preview')]");
 
-        private By SearchField = By.ClassName("fast-search__input");
+        private By SearchField = By.XPath("//*[@class='fast-search__input']");
 
         private By TechSection = By.XPath("//h2//*[text() = 'Технологии']");
 
