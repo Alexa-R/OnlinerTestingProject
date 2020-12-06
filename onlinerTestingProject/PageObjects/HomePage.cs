@@ -15,7 +15,7 @@ namespace OnlinerTestingProject.PageObjects
 
         private By TechSection = By.XPath("//h2//*[text()='Технологии']");
 
-        private By LastNews = By.XPath("(//*[contains(@class,'b-main-page-news')]//div[contains(@class,'news-list-col')]//li[3])[3]");
+        private By LastNews = By.XPath("//div[contains(@class,'main-page-news')][./header//*[text()='Технологии']]/div//li[last()]");
 
 
 
