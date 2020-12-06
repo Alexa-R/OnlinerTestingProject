@@ -41,7 +41,7 @@ namespace OnlinerTestingProject
                 case "Chrome":
                     if (Driver == null)
                     {
-                        driver = new ChromeDriver();
+                        driver = new ChromeDriver(@"C:\drivers");
                         Drivers.Add("Chrome", Driver);
                     }
                     break;

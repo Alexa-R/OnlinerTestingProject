@@ -1,9 +1,7 @@
 using NUnit.Framework;
 namespace OnlinerTestingProject.Unit
-{
-    public class Tests
-    {
-        [TestFixture]
+{ 
+    [TestFixture]
         public class BaseTest
         {
 
@@ -22,4 +20,3 @@ namespace OnlinerTestingProject.Unit
             }
         }
     }
-}
