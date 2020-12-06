@@ -8,16 +8,9 @@ namespace OnlinerTestingProject.PageObjects
 {
     public class SearchResultPage
     {
-
         private By ProductsFrame = By.XPath("//iframe[@class='modal-iframe']");
 
         private By Item = By.XPath("(//a[@class='product__title-link'])[2]");
-
-
-        public void SwitchProductsFrame()
-        {
-            WebDriverFactory.Driver.SwitchTo().Frame(WebDriverFactory.Driver.FindElement(ProductsFrame));
-        }
 
         public void ClickItem()
         {
@@ -25,6 +18,8 @@ namespace OnlinerTestingProject.PageObjects
             wait.Until(ExpectedConditions.ElementToBeClickable(Item));
 
             WebDriverFactory.Driver.FindElement(Item).Click();
+            WebDriverFactory.Driver.SwitchTo().Frame(WebDriverFactory.Driver.FindElement(ProductsFrame));
+            WebDriverFactory.Driver.SwitchTo().DefaultContent();
         }
     }
 }
