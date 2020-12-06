@@ -13,7 +13,7 @@ namespace OnlinerTestingProject.TestCases
             Pages.HomePage.ScrollToTech();
             Pages.HomePage.ClickLastNews();
 
-            Assert.True(int.Parse(Pages.NewsPage.GetTextLikeCount()) >= 0);
+            Assert.True(int.Parse(Pages.NewsPage.GetLikeCountText()) >= 0);
         }
     }
 }

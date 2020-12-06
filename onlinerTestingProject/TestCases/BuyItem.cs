@@ -8,12 +8,12 @@ namespace OnlinerTestingProject.TestCases
         [Test]
         public void Test()
         {
-            Pages.HomePage.SearchItem("MacBook");
+            Pages.HomePage.SearchItem("Ноутбук Apple MacBook Air 13 2020 MWTJ2");
             Pages.SearchResultPage.ClickItem();
             Pages.ProductPage.ClickAddToCartButton();
             Pages.ProductPage.ClickAddToCartButton();
 
-            Assert.AreEqual("Оформить заказ", Pages.CartPage.GetTextCheckoutButton());
+            Assert.AreEqual("Оформить заказ", Pages.CartPage.GetCheckoutButtonText());
         }
     }
 }

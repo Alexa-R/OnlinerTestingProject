@@ -8,7 +8,7 @@ namespace OnlinerTestingProject.PageObjects
     {
         private By LikeCount = By.XPath("//div[@data-reaction='slight_smile']//span[@class='st-count']");
 
-        public string GetTextLikeCount() {
+        public string GetLikeCountText() {
             WebDriverWait wait = new WebDriverWait(WebDriverFactory.Driver, TimeSpan.FromSeconds(40));
             wait.Until(ExpectedConditions.ElementIsVisible(LikeCount));
             

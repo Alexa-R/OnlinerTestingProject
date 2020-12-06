@@ -8,9 +8,9 @@ namespace OnlinerTestingProject.PageObjects
     {
         private By CheckoutButton = By.XPath("//*[contains(@class,'confirm')]//a");
 
-        public string GetTextCheckoutButton() {
+        public string GetCheckoutButtonText() {
             WebDriverWait wait = new WebDriverWait(WebDriverFactory.Driver, TimeSpan.FromSeconds(40));
-            wait.Until(ExpectedConditions.ElementToBeClickable(CheckoutButton));
+            wait.Until(ExpectedConditions.ElementIsVisible(CheckoutButton));
 
             return WebDriverFactory.Driver.FindElement(CheckoutButton).Text;
         }
