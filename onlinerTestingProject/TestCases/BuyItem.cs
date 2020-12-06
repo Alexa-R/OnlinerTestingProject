@@ -9,13 +9,13 @@ namespace OnlinerTestingProject.TestCases
         [Test]
         public void Test()
         {
-            Page.HomePage.Search("MacBook");
-            Page.SearchResultPage.SwitchProductsFrame();
-            Page.SearchResultPage.ClickItem();
-            Page.ProductPage.ClickAddToCartButton();
-            Page.ProductPage.ClickAddToCartButton();
+            Pages.HomePage.Search("MacBook");
+            Pages.SearchResultPage.SwitchProductsFrame();
+            Pages.SearchResultPage.ClickItem();
+            Pages.ProductPage.ClickAddToCartButton();
+            Pages.ProductPage.ClickAddToCartButton();
 
-            Assert.AreEqual("Оформить заказ", Page.CartPage.GetTextCheckoutButton());
+            Assert.AreEqual("Оформить заказ", Pages.CartPage.GetTextCheckoutButton());
         }
     }
 }

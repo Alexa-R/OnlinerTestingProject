@@ -9,12 +9,12 @@ namespace OnlinerTestingProject.TestCases
         [Test]
         public void LogInAsUserTest()
         {
-            Page.HomePage.ClickSignInButton();
-            Page.LogInPage.EnterMail("novaj49910@58as.com");
-            Page.LogInPage.EnterPassword("qwerty1234");
-            Page.LogInPage.ClickLogInButton();
+            Pages.HomePage.ClickSignInButton();
+            Pages.LogInPage.EnterMail("novaj49910@58as.com");
+            Pages.LogInPage.EnterPassword("qwerty1234");
+            Pages.LogInPage.ClickLogInButton();
 
-            Assert.IsTrue(Page.HomePage.IsProfileLinkDisplayed());
+            Assert.IsTrue(Pages.HomePage.IsProfileLinkDisplayed());
         }
     }
 }

@@ -9,10 +9,10 @@ namespace OnlinerTestingProject.TestCases
         [Test]
         public void Test()
         {
-            Page.HomePage.ScrollToTech();
-            Page.HomePage.ClickLastNews();
+            Pages.HomePage.ScrollToTech();
+            Pages.HomePage.ClickLastNews();
 
-            Assert.True(int.Parse(Page.NewsPage.GetTextLikeCount()) >= 0);
+            Assert.True(int.Parse(Pages.NewsPage.GetTextLikeCount()) >= 0);
         }
     }
 }

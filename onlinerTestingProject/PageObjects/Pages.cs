@@ -4,7 +4,7 @@ using SeleniumExtras.PageObjects;
 
 namespace OnlinerTestingProject.PageObjects
 {
-    public class Page
+    public static class Pages
     {
         private static T GetPage<T>() where T : new()
         {
