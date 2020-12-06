@@ -31,7 +31,7 @@ namespace OnlinerTestingProject.PageObjects
             return WebDriverFactory.Driver.FindElement(ProfileLink).Displayed;
         }
 
-        public void Search(string item)
+        public void SearchItem(string item)
         {
             WebDriverFactory.Driver.FindElement(SearchField).SendKeys(item);
         }

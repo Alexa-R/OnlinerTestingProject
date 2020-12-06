@@ -1,7 +1,7 @@
 ﻿using NUnit.Framework;
 using OnlinerTestingProject.PageObjects;
-using OnlinerTestingProject.Unit;
-using static OnlinerTestingProject.Unit.BaseTest;
+using OnlinerTestingProject;
+using static OnlinerTestingProject.BaseTest;
 
 namespace OnlinerTestingProject.TestCases
 {

@@ -1,5 +1,5 @@
 using NUnit.Framework;
-namespace OnlinerTestingProject.Unit
+namespace OnlinerTestingProject
 { 
     [TestFixture]
         public class BaseTest
