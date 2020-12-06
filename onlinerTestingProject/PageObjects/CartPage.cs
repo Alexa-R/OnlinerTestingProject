@@ -6,7 +6,7 @@ namespace OnlinerTestingProject.PageObjects
 {
     public class CartPage
     {
-        private By CheckoutButton = By.XPath("//*[contains(@class, 'confirm')]//a");
+        private By CheckoutButton = By.XPath("//*[contains(@class,'confirm')]//a");
 
         public string GetTextCheckoutButton() {
             WebDriverWait wait = new WebDriverWait(WebDriverFactory.Driver, TimeSpan.FromSeconds(40));

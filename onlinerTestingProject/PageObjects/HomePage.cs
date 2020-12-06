@@ -7,13 +7,13 @@ namespace OnlinerTestingProject.PageObjects
 {
     public class HomePage
     {
-        private By SignInButton = By.XPath(" //*[@id='userbar']//div[contains(@class,'text')]");
+        private By SignInButton = By.XPath("//*[@id='userbar']//div[text()='Вход']");
 
-        private By ProfileLink = By.XPath("//a[contains(@class, 'profile__preview')]");
+        private By ProfileLink = By.XPath("//a[contains(@class,'profile__preview')]");
 
         private By SearchField = By.XPath("//*[@class='fast-search__input']");
 
-        private By TechSection = By.XPath("//h2//*[text() = 'Технологии']");
+        private By TechSection = By.XPath("//h2//*[text()='Технологии']");
 
         private By LastNews = By.XPath("(//*[contains(@class,'b-main-page-news')]//div[contains(@class,'news-list-col')]//li[3])[3]");
 

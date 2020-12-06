@@ -6,7 +6,7 @@ namespace OnlinerTestingProject.PageObjects
 {
     public class ProductPage
     {
-        private By AddToCartButton = By.XPath("(//*[@class = 'product-main']//*[contains(@data-href, 'cart')])[1]");
+        private By AddToCartButton = By.XPath("(//*[@class='product-main']//*[contains(@data-href,'cart')])[1]");
 
         public void ClickAddToCartButton()
         {

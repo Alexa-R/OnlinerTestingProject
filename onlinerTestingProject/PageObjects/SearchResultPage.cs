@@ -9,9 +9,9 @@ namespace OnlinerTestingProject.PageObjects
     public class SearchResultPage
     {
 
-        private By ProductsFrame = By.XPath("//iframe[@class = \"modal-iframe\"]");
+        private By ProductsFrame = By.XPath("//iframe[@class='modal-iframe']");
 
-        private By Item = By.XPath("(//a[@class = \"product__title-link\"])[2]");
+        private By Item = By.XPath("(//a[@class='product__title-link'])[2]");
 
 
         public void SwitchProductsFrame()
