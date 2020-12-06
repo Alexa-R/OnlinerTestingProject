@@ -1,5 +1,5 @@
 using NUnit.Framework;
-namespace onlinerTestingProject.Unit
+namespace OnlinerTestingProject.Unit
 {
     public class Tests
     {

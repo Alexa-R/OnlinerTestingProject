@@ -16,7 +16,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="PageObjects\" />
     <Folder Include="TestCases\" />
     <Folder Include="WrapperFactory\" />
     <Folder Include="Unit\" />

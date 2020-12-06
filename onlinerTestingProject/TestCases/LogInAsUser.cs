@@ -1,8 +1,8 @@
 ﻿using NUnit.Framework;
-using onlinerTestingProject.PageObjects;
-using static onlinerTestingProject.Unit.Tests;
+using OnlinerTestingProject.PageObjects;
+using static OnlinerTestingProject.Unit.Tests;
 
-namespace onlinerTestingProject.TestCases
+namespace OnlinerTestingProject.TestCases
 {
     public class LogInAsUser : BaseTest
     {

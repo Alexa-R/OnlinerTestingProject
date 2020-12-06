@@ -2,7 +2,7 @@
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 
-namespace onlinerTestingProject.PageObjects
+namespace OnlinerTestingProject.PageObjects
 {
     public class NewsPage
     {

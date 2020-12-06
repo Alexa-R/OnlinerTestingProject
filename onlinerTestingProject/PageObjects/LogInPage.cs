@@ -1,8 +1,9 @@
 ﻿using System;
+using OnlinerTestingProject;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.PageObjects;
 
-namespace onlinerTestingProject.PageObjects
+namespace OnlinerTestingProject.PageObjects
 {
     public class LogInPage
     {
