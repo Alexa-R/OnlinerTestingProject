@@ -14,8 +14,16 @@ namespace OnlinerTestingProject
 
         public static IWebDriver Driver
         {
-            get { return driver; }
-           private set { driver = value; }
+            get
+            {
+                if (driver == null)
+                    throw new NullReferenceException("The WebDriver browser instance was not initialized. You should first call the method InitBrowser.");
+                return driver;
+            }
+            private set
+            {
+                driver = value;
+            }
         }
 
         public static void InitBrowser(string browserName)
@@ -23,7 +31,7 @@ namespace OnlinerTestingProject
             switch (browserName)
             {
                 case "Firefox":
-                    if (Driver == null)
+                    if (driver == null)
                     {
                         driver = new FirefoxDriver();
                         Drivers.Add("Firefox", Driver);
@@ -31,7 +39,7 @@ namespace OnlinerTestingProject
                     break;
 
                 case "IE":
-                    if (Driver == null)
+                    if (driver == null)
                     {
                         driver = new InternetExplorerDriver();
                         Drivers.Add("IE", Driver);
@@ -39,7 +47,7 @@ namespace OnlinerTestingProject
                     break;
 
                 case "Chrome":
-                    if (Driver == null)
+                    if (driver == null)
                     {
                         driver = new ChromeDriver(@"C:\drivers");
                         Drivers.Add("Chrome", Driver);
@@ -50,7 +58,7 @@ namespace OnlinerTestingProject
 
         public static void GoToUrl(string url)
         {
-            driver.Url = url;
+            Driver.Url = url;
         }
 
         public static void CloseAllDrivers()
