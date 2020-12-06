@@ -6,7 +6,7 @@ namespace OnlinerTestingProject.PageObjects
 {
     public class NewsPage
     {
-        private By LikeCount = By.XPath("//*[@id='st-1']/div[1]/*[@class='st-count']");
+        private By LikeCount = By.XPath("//div[@data-reaction='slight_smile']//span[@class='st-count']");
 
         public string GetTextLikeCount() {
             WebDriverWait wait = new WebDriverWait(WebDriverFactory.Driver, TimeSpan.FromSeconds(40));
